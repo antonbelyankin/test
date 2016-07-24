@@ -2,27 +2,39 @@
     <head></head>
     <body>
         <script>
+            // quick sort algorithm
             
-            Array.prototype.bubbleSort_algo = function()   
-            {  
-            var is_sorted = false;  
-             while (!is_sorted)   
-             {  
-                is_sorted = true;  
-                for (var n = 0; n < this.length - 1; n++)   
-                {  
-                  if (this[n] > this[n+1]){  
-                    var x = this[n+1];  
-                    this[n+1] = this[n];  
-                    this[n] = x;  
-                    is_sorted = false;  
-                  }  
-                }  
-              }  
-              return this;  
-            };  
-
-            console.log([6,4,0, 3,-2,1].bubbleSort_algo()); 
+            var original_array = [1,65,87,4,3,2,7,8,90,14,15,81,32,45,67,3];
+            
+            function quick_sort(original_array)
+            {
+                if(original_array.length<=1)
+                {
+                    return original_array;
+                }
+                else
+                {
+                    var sorted_array = [];
+                    var pivot_val = original_array.pop();
+                    var length = original_array.length;
+                    var left =  [];
+                    var right = [];   
+                    console.log(original_array);
+                    for(var i=0; i< length; i++)
+                    {
+                        if(pivot_val > original_array[i])
+                        {
+                            left.push(original_array[i]);
+                        }
+                        else
+                        {
+                            right.push(original_array[i]);
+                        }
+                    }
+                    
+                    return sorted_array.concat(quick_sort(left), pivot_val, quick_sort(right));
+                }
+        }
             
         </script>
     </body>
