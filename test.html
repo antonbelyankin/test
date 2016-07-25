@@ -1,41 +1,40 @@
 <html>
     <head></head>
     <body>
-        <script>
-            // quick sort algorithm
-            
-            var original_array = [1,65,87,4,3,2,7,8,90,14,15,81,32,45,67,3];
-            
-            function quick_sort(original_array)
-            {
-                if(original_array.length<=1)
-                {
-                    return original_array;
+        <script>            
+            var original_array = [3,1,4,2,5,9,2,6,5,4];
+            var check = false;
+            var buff = [];
+            console.log(sort_array([4], [7,9])); 
+        function sort_array(left_part,right_part)    
+        {
+            var i = 0;  
+            var j = 0;  
+            var results = [];  
+  
+            while (i < left_part.length || j < right_part.length)
+            {  
+                if (i === left_part.length)
+                {  
+                    // j is the only index left_part  
+                    results.push(right_part[j]);  
+                    j++;  
+                }   
+                else if (j === right_part.length || left_part[i] <= right_part[j])
+                {  
+                    results.push(left_part[i]);  
+                    i++;  
                 }
-                else
-                {
-                    var sorted_array = [];
-                    var pivot_val = original_array.pop();
-                    var length = original_array.length;
-                    var left =  [];
-                    var right = [];   
-                    console.log(original_array);
-                    for(var i=0; i< length; i++)
-                    {
-                        if(pivot_val > original_array[i])
-                        {
-                            left.push(original_array[i]);
-                        }
-                        else
-                        {
-                            right.push(original_array[i]);
-                        }
-                    }
-                    
-                    return sorted_array.concat(quick_sort(left), pivot_val, quick_sort(right));
-                }
-        }
+                else 
+                {  
+                    results.push(right_part[j]);  
+                    j++;  
+                }  
+            }  
             
+            return results;  
+        }  
+        
         </script>
     </body>
 </html>
