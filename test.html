@@ -1,40 +1,78 @@
 <html>
-    <head></head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>Tutorial | JavaScript Tutorial</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta property="fb:app_id" content="112959575461438"/>
+    </head>
     <body>
-        <script>            
-            var original_array = [3,1,4,2,5,9,2,6,5,4];
-            var check = false;
-            var buff = [];
-            console.log(sort_array([4], [7,9])); 
-        function sort_array(left_part,right_part)    
-        {
-            var i = 0;  
-            var j = 0;  
-            var results = [];  
-  
-            while (i < left_part.length || j < right_part.length)
-            {  
-                if (i === left_part.length)
-                {  
-                    // j is the only index left_part  
-                    results.push(right_part[j]);  
-                    j++;  
-                }   
-                else if (j === right_part.length || left_part[i] <= right_part[j])
-                {  
-                    results.push(left_part[i]);  
-                    i++;  
-                }
-                else 
-                {  
-                    results.push(right_part[j]);  
-                    j++;  
-                }  
-            }  
+        <style>
+            table#bagua-table  td{ border: solid;}
             
-            return results;  
-        }  
+        </style>
         
-        </script>
+        <table id="bagua-table">
+            <tbody>
+                    <tr>
+                        <th colspan="3"><em>Bagua</em> Chart: Direction, Element, Color, Meaning</th>
+                    </tr>
+                    <tr>
+                        <td class="nw highlight">
+                            <strong><b><i><a>Northwest</a></i></b></strong>
+                            <br>Metal
+                            <br>Silver
+                            <br>Elders
+                        </td>
+                        <td class="n"><strong>North</strong>
+                          <br>Water
+                          <br>Blue
+                          <br>Change
+                        </td>
+                        <td class="ne"><strong>Northeast</strong>
+                          <br>Earth
+                          <br>Yellow
+                          <br>Direction
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="w"><strong>West</strong>
+                          <br>Metal
+                          <br>Gold
+                          <br>Youth
+                        </td>
+                        <td class="c"><strong>Center</strong>
+                          <br>All
+                          <br>Purple
+                          <br>Harmony
+                        </td>
+                        <td class="e"><strong>East</strong>
+                          <br>Wood
+                          <br>Blue
+                          <br>Future
+                        </td>
+                    </tr>
+                <tr>
+                  <td class="sw"><strong>Southwest</strong>
+                    <br>Earth
+                    <br>Brown
+                    <br>Tranquility
+                  </td>
+                  <td class="s"><strong>South</strong>
+                    <br>Fire
+                    <br>Orange
+                    <br>Fame
+                  </td>
+                  <td class="se"><strong>Southeast</strong>
+                    <br>Wood
+                    <br>Green
+                    <br>Romance
+                  </td>
+                </tr>
+              </tbody>
+        </table>
+        
+        
+            <script type="text/javascript" src="script.js"></script> 
     </body>
 </html>
