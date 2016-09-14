@@ -1,0 +1,26 @@
+AppBundle\Entity\Region:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\RegionRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        rId:
+            type: integer
+            unique: true
+            column: r_id
+        rName:
+            type: string
+            length: '40'
+            nullable: true
+            column: r_name
+        rDescription:
+            type: string
+            length: '50'
+            nullable: true
+            column: r_description
+    lifecycleCallbacks: {  }
